@@ -1,3 +1,6 @@
 footer{
 	background-color:white;
+	/* ריווח בין התפריט לתוכן הדף */
+	margin:0px 0 0 0;
 }
+#boxfooter{width:100%; height:500px; background-color:white; border:1px solid black;}

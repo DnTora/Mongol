@@ -2,11 +2,13 @@ header {
 	
 }
 .tdToolbar a {
+	font-size:21px;
 	color:white;
 	background-color:#666;
 	display:block;
 	/* קביעת הגודל של כל ריבוע בתפריט */
 	padding: 10px 30px;
+	text-shadow:0.6px 0.7px  #FF0000;;
  }
  /* שינוי כל סימון של ריבוע */
 .tdToolbar a:hover{background-color:#555; color:white; text-decoration: none;}
