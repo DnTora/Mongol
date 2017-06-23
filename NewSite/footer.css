@@ -3,4 +3,7 @@ footer{
 	/* ריווח בין התפריט לתוכן הדף */
 	margin:0px 0 0 0;
 }
+/* גודל הקופסא הלבנה*/
 #boxfooter{width:100%; height:500px; background-color:white; border:1px solid black;}
+/* איזור ההודעות הרצות כלומר הקופסה שלו*/
+#boxmessage{width:33.8%; height:499px; background-color:red; float:right;}
