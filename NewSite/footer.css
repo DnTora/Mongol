@@ -6,4 +6,4 @@ footer{
 /* גודל הקופסא הלבנה*/
 #boxfooter{width:100%; height:500px; background-color:white; border:1px solid black;}
 /* איזור ההודעות הרצות כלומר הקופסה שלו*/
-#boxmessage{width:33.8%; height:499px; background-color:red; float:right;}
+#boxmessage{width:33.4%; height:499px; background-color:#777f7f; float:right; border-bottom:1px solid black; margin: 0px 0 0  0;}
