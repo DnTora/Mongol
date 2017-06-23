@@ -4,6 +4,9 @@ footer{
 	margin:0px 0 0 0;
 }
 /* גודל הקופסא הלבנה*/
-#boxfooter{width:100%; height:500px; background-color:white; border:1px solid black;}
+	/* הערה: הגובה הוא זמני! */
+#box_footer{width:100%; height:1000px; background-color:white; border:1px solid black;}
 /* איזור ההודעות הרצות כלומר הקופסה שלו*/
-#boxmessage{width:33.4%; height:499px; background-color:#777f7f; float:right; border-bottom:1px solid black; margin: 0px 0 0  0;}
+#box_message{width:20%; height:100%; background-color:#777f7f; float:right; border-bottom:1px solid black; margin: 0px 0 0  0;}
+#box_marquee{margin:0px 5px 5px 5px; width:100%-5px; height:450px; background-color:#80f442; border:1px solid}
+#title_marquee{border:1px solid; margin:5px 5px 0px 5px; background-color:#d6d626}

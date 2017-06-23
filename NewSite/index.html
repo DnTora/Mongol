@@ -2,11 +2,10 @@
 <html>
 	<head>
 		<title>MySite</title>
+		<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="header.css" />
 		<link rel="stylesheet" href="footer.css" />
 		<script src="scripts.js"></script>
-		<!-- Bootstrap -->
-		<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
 	</head>
 	
 	<body style="background-color:gray" dir="rtl">
@@ -24,11 +23,21 @@
 				</table>
 			</header>
 			<footer>
-				<div id="boxfooter">
-				<div id="boxmessage">
-				<h3 id="boxmessagetitle">מה חדש?</h3>
-				<div>
-		</div>
-		</footer>
+				<div id="box_footer">
+					<div id="box_message">
+						<h3 id="title_marquee">מה חדש?</h3>
+						<marquee id="box_marquee" direction="up" scrolldelay=250>
+							<ul>
+								<li><p>בלה בלה בלה...</p></li>
+								<li><p>בלה בלה בלה...</p></li>
+								<li><p>בלה בלה בלה...</p></li>
+								<li><p>בלה בלה בלה...</p></li>
+								<li><p>בלה בלה בלה...</p></li>
+								<li><p>בלה בלה בלה...</p></li>
+							</ul>
+						</marquee>
+					</div>
+				</div>
+			</footer>
 	</body>
 </html>
