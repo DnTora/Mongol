@@ -1,0 +1,13 @@
+header {
+	
+}
+.tdToolbar a {
+	color:white;
+	background-color:#666;
+	display:block;
+	/* קביעת הגודל של כל ריבוע בתפריט */
+	padding: 10px 30px;
+ }
+ /* שינוי כל סימון של ריבוע */
+.tdToolbar a:hover{background-color:#555; color:white; text-decoration: none;}
+.tdToolbar{ width:1%; text-align:center;} 
