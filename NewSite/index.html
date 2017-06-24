@@ -3,31 +3,38 @@
 	<head>
 		<title>MySite</title>
 		<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
-		<link rel="stylesheet" href="header.css" />
-		<link rel="stylesheet" href="footer.css" />
-		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="resources/css/global.css" />
+		<link rel="stylesheet" href="resources/css/header.css" />
+		<link rel="stylesheet" href="resources/css/main.css" />
+		<link rel="stylesheet" href="resources/css/footer.css" />
 		<script src="scripts.js"></script>
 	</head>
 	
-	<body style="background-color:gray" dir="rtl">
+	<body dir="rtl">
 		<div class="container">
 			<header>
-				<div id="logo" style="border: 1px solid; background-color:#5e8287"> 
-					<center><img src="resources/SiteLogo.png" /></center>
+				<div id="div_header"> 
+					<center><img src="resources/images/SiteLogo.png" /></center>
 				</div>
-				<table id="headerToolbar" border=1 style="">
-					<tr>
-						<td class="tdToolbar"><a href="#">דף הבית</a></td>
-						<td class="tdToolbar"><a href="#">צור קשר</a></td>
-						<td class="tdToolbar"><a href="#">אודות</a></td>
-					</tr>
-				</table>
+				<nav>
+					<div id="div_navigationBar">
+						<table id="table_navigationBar" border=1>
+							<tr>
+								<td class="navigationBarButton"><a href="index.html">דף הבית</a></td>
+								<td class="navigationBarButton"><a href="">פורום</a></td>
+								<td class="navigationBarButton"><a href="">צור קשר</a></td>
+								<td class="navigationBarButton"><a href="">אודות</a></td>
+							</tr>
+						</table>
+					</div>
+				</nav>
 			</header>
-			<footer>
-				<div id="box_footer">
-					<div id="box_message">
-						<center><h3 id="title_marquee">מה חדש?</h3></center>
-						<marquee id="box_marquee" direction="up" scrolldelay=250>
+			
+			<main>
+				<div id="div_main">
+					<div id="div_rightTootbar">
+						<h3 id="title_whatsNew">מה חדש?</h3>
+						<marquee id="marquee_whatsNew" direction="up" scrolldelay=250>
 							<ul>
 								<li><p>בלה בלה בלה...</p></li>
 								<li><p>בלה בלה בלה...</p></li>
@@ -38,16 +45,20 @@
 							</ul>
 						</marquee>
 					</div>
-					<div id="box_content">
-					
-					<div id="header">
-					<center><h1>עמוד הבית</h1></center>
-					</div>
-					
-					<div id="footer">
-					
+					<!-- תוכן העמוד נכנס כאן: -->
+					<div id="div_pageContent">
+						<h1>עמוד הבית</h1>
+						<br />
+						<p>ברוכים הבאים לאתר!</p>
 					</div>
 				</div>
+			</main>
+			
+			<footer>
+				<div id="div_footer">
+					<p>כל הזכויות שמורות ®</p>
+				</div>
 			</footer>
+		</div>
 	</body>
 </html>
