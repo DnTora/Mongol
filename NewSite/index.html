@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>MySite</title>
+		<title>MyBooks</title>
 		<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="resources/css/global.css" />
 		<link rel="stylesheet" href="resources/css/header.css" />
 		<link rel="stylesheet" href="resources/css/main.css" />
 		<link rel="stylesheet" href="resources/css/footer.css" />
-		<script src="scripts.js"></script>
 	</head>
 	
 	<body dir="rtl">
-		<div class="container">
+		<div id="div_container"> <!-- class="container" -->
 			<header>
 				<div id="div_header"> 
-					<center><img src="resources/images/SiteLogo.png" /></center>
+					<center><img src="resources/images/SiteLogo.png" alt="logo" /></center>
 				</div>
-				<nav>
-					<div id="div_navigationBar">
-						<table id="table_navigationBar" border=1>
-							<tr>
-								<td class="navigationBarButton"><a href="index.html">דף הבית</a></td>
-								<td class="navigationBarButton"><a href="">פורום</a></td>
-								<td class="navigationBarButton"><a href="">צור קשר</a></td>
-								<td class="navigationBarButton"><a href="">אודות</a></td>
-							</tr>
-						</table>
-					</div>
-				</nav>
+				<div id="div_navigationBar">
+					<table id="table_navigationBar" border=1>
+						<tr>
+							<td class="navigationBarButton"><a href="index.html">דף הבית</a></td>
+							<td class="navigationBarButton"><a href="">פורום</a></td>
+							<td class="navigationBarButton"><a href="">צור קשר</a></td>
+							<td class="navigationBarButton"><a href="">אודות</a></td>
+						</tr>
+					</table>
+				</div>
 			</header>
 			
 			<main>
 				<div id="div_main">
 					<div id="div_rightTootbar">
+						<div id="div_loginArea">
+							<form method="POST" action=""> <!-- !!!!!!!!!!!!!!!!!!! -->
+								<table id="table_loginArea">
+									<tr>
+										<td><h6>שם משתמש:</h6></td>
+										<td><input class="loginTextBox" type="text" name="userName" /></td>
+									</tr>
+									<tr>
+										<td><h6>סיסמה:</h6></td>
+										<td><input class="loginTextBox" type="text" name="password" /></td>
+									</tr>
+								</table>
+								<button id="button_login">התחברות</button>
+							</form>
+						</div>
 						<div id="div_whatsNew">
 							<h3 id="title_whatsNew">מה חדש?</h3>
 							<marquee id="marquee_whatsNew" direction="up" scrolldelay=250>
@@ -58,9 +70,16 @@
 			
 			<footer>
 				<div id="div_footer">
-					<p>כל הזכויות שמורות ®</p>
+					<p>כל הזכויות שמורות ® 2017</p>
 				</div>
 			</footer>
+			
+			<script>
+					document.getElementById("div_header").style.width = (window.innerWidth - 200) + "px";
+					document.getElementById("div_navigationBar").style.width = (window.innerWidth - 200) + "px";
+					document.getElementById("div_main").style.width = (window.innerWidth - 200) + "px";
+					document.getElementById("div_footer").style.width = (window.innerWidth - 200) + "px";
+			</script>
 		</div>
 	</body>
 </html>
