@@ -1,4 +1,4 @@
-<div id="div_whatsNew">
+					<div id="div_whatsNew">
 							<h3 id="title_whatsNew">מה חדש?</h3>
 							<marquee id="marquee_whatsNew" direction="up" scrolldelay=250>
 								<ul>
@@ -12,3 +12,4 @@
 							</marquee>
 						</div>
 					</div>
+					
