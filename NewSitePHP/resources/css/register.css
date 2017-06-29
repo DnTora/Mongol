@@ -1,0 +1,56 @@
+#background_popup{
+position:fixed;
+height:100%;
+width:100%;
+background-color:rgba(15,0,0 ,0.1);
+top:0;
+left:0;
+display:none;
+
+}
+#popup{
+margin:auto;
+width:850px;
+height:600px;
+position:fixed;
+background-color:white;
+left:0;
+right:0;
+top:18%;
+overflow:hidden;
+border:1px outset black;
+}
+#exit{
+width:30px;
+height:30px;
+right:24.75%;
+border-radius:20px;
+border:2px solid black;
+cursor:pointer;
+position:fixed;
+}
+#xxxx{
+text-align:center;
+font_weight:bold;
+font-family:sans-serif;
+font-size:44px;
+margin:-22px 0 0 0;
+position:fixed;
+}
+#boxregister{
+margin-top:150px;
+
+}
+       #top{
+	   margin:-20px 0 0 0;
+	   padding:0;
+	  background-color:red;
+	   }
+	   hr{
+	   border:1px solid green;
+	   }
+	   #rrrr{
+	   margin:0 0 50px 0;
+	   padding:25px 0 0 0;
+	
+	   }
