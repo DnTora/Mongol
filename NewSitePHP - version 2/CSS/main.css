@@ -1,0 +1,49 @@
+/* הערה: הגובה הוא זמני! */
+
+#div_main{
+	width:1140px;
+	height:1000px;
+	background-color:white;
+	border:1px solid black;
+}
+	#div_rightTootbar{
+		width:20%;
+		height:100%;
+		background-color:#777f7f;
+		float:right;
+		border-left:1px solid black;
+		margin: 0px 0px 0px 20px;
+	}
+		#div_loginArea{
+			background-color:yellow;
+			margin:5px 5px 5px 5px;
+			border:1px solid;
+		}
+			#table_loginArea{
+				
+			}
+				.loginTextBox{
+					width:100%;
+					height:100%;
+				}
+			#button_login{
+				margin:5px;
+			}
+		#div_whatsNew{
+	
+		}
+			#title_whatsNew{
+				border:1px solid;
+				margin:5px 5px 0px 5px;
+				background-color:#399906;
+			}
+			#marquee_whatsNew{
+				margin:0px 5px 5px 5px;
+				width:100%-5px;
+				height:200px;
+				background-color:#80f442;
+				border:1px solid
+			}
+	#div_pageContent{
+		
+	}
