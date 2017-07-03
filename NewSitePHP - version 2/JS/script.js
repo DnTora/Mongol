@@ -1,0 +1,28 @@
+///////////////////////////////////////////////////////////// Methods /////////////////////////////////////////////////////////////
+function fitSiteToScreen() {
+	var CONTAINER_PERCENTAGE = 0.8;
+	var containerSize = window.outerWidth * CONTAINER_PERCENTAGE;
+	var paddingDistance = (window.outerWidth - window.outerWidth * CONTAINER_PERCENTAGE) / 2;
+	document.getElementById("div_container").style.padding = "0px " + paddingDistance + "px " + "0px " + paddingDistance + "px";
+	document.getElementById("div_header").style.width = containerSize + "px";
+	document.getElementById("div_navigationBar").style.width = containerSize + "px";
+	document.getElementById("div_main").style.width = containerSize + "px";
+	document.getElementById("div_footer").style.width = containerSize + "px";
+}
+
+function toggleRegisterationWindow() {
+	var registerationPopUp = document.getElementById("div_registerationPopUp");
+	if (registerationPopUp.style.display == "")
+		registerationPopUp.style.display = "block";
+	else
+		registerationPopUp.style.display = ""
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+///////////////////////////////////////////////////////////// Events //////////////////////////////////////////////////////////////
+window.onresize = function(event){
+	fitSiteToScreen();
+};
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
