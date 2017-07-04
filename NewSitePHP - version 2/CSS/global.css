@@ -36,14 +36,14 @@ h6{
 			#div_registerationWindow{
 				background-color:white;
 				border: 1px solid;
-				width:50%;
-				height:50%;
+				width:630px;
+				height:450px;
 				position:fixed;
-				left:25%;
-				top:25%;
+				left:0px;
+				top:0px;
 			}
 				#div_registerationTitle{
-					background-color:red;
+					background-color:orange;
 					border: 1px solid
 				}
 					#imageButton_close{
