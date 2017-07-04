@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	$alert_htmlCode = '';
 	if (isset($_SESSION['username'])) {
 		echo
 '			<main>
@@ -12,6 +13,8 @@
 						</div>
 ';
 	} else {
+		if (isset($_COOKIE['login_errorData']))
+			$alert_htmlCode = '<p style="color:black; background-color:red; font-weight:bold;">' . $_COOKIE['login_errorData'] . '</p>';
 		echo
 '			<main>
 				<div id="div_main">
@@ -30,8 +33,9 @@
 								</table>
 								<button id="button_login" name="submit">התחברות</button>
 								<input id="button_openRegisterationWindow" type="button" value="הרשמה" onclick="toggleRegisterationWindow();" />
-							</form>
-						</div>
+							</form>'
+							. $alert_htmlCode .
+						'</div>
 ';
 	}
 ?>

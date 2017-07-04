@@ -2,7 +2,7 @@
 		<div id="div_container">
 			<header>
 				<div id="div_header"> 
-					<center><img src="resources/images/SiteLogo.png" alt="logo" /></center>
+					<center><img id="image_logo" src="resources/images/SiteLogo.png" alt="logo" /></center>
 				</div>
 				<div id="div_navigationBar">
 					<table id="table_navigationBar" border=1>
