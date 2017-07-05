@@ -20,7 +20,7 @@
 				<div id="div_main">
 					<div id="div_rightTootbar">
 						<div id="div_loginArea">
-							<form method="POST" action="PHP/login.php">
+							<form id="form_login" method="POST" action="PHP/login.php">
 								<table id="table_loginArea">
 									<tr>
 										<td><h6>שם משתמש:</h6></td>
