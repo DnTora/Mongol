@@ -27,9 +27,9 @@
 					header('Location: ../index.php?login=wrongPassword');
 					exit();
 				} else {
-					$_SESSION['userName'] = $row['userName'];
+					$_SESSION['userName'] = $row['user_name'];
 					$_SESSION['password'] = $row['password'];
-					$_SESSION['email'] =  $row['email'] ;
+					$_SESSION['emailAddress'] =  $row['email_address'] ;
 					header('Location: ../index.php?login=success');
 					exit();
 				}
