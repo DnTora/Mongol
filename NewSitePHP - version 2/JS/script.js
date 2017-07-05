@@ -40,6 +40,16 @@ function toggleRegisterationWindow() {
 	else
 		registerationPopUp.style.display = "";
 }
+
+function getCookieValue(cookieName) {
+	var cookiesArray = (document.cookie).split("; ");
+	for (i = 0; i < cookiesArray.length; i++) {
+		var cookieDetailsArray = cookiesArray[i].split("=");
+		if (cookieDetailsArray[0] == cookieName)
+			return cookieDetailsArray[1];
+	}
+	return null;
+}
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -47,10 +57,16 @@ function toggleRegisterationWindow() {
 ///////////////////////////////////////////////////////////// Events //////////////////////////////////////////////////////////////
 window.onload = function(event) {
 	fitSiteBodyToScreen();
-	var cookiesArray = (document.cookie).split("; ");
-	for (i = 0; i < cookiesArray.length; i++)
-		if (cookiesArray[i].split("=")[0] == "registeration_errorData")
-			toggleRegisterationWindow();
+	if (getCookieValue("registeration_errorData") != null) {
+		toggleRegisterationWindow();
+		var textBoxSavedDataArray = getCookieValue("registeration_textBoxData").split("|");
+		document.getElementById("form_registeration").elements["userName"].value = textBoxSavedDataArray[0];
+		document.getElementById("form_registeration").elements["password"].value = textBoxSavedDataArray[1];
+		document.getElementById("form_registeration").elements["passwordRepeat"].value = textBoxSavedDataArray[2];
+		document.getElementById("form_registeration").elements["privateName"].value = textBoxSavedDataArray[3];
+		document.getElementById("form_registeration").elements["familyName"].value = textBoxSavedDataArray[4];
+		document.getElementById("form_registeration").elements["emailAddress"].value = textBoxSavedDataArray[5];
+	}
 }
 window.onresize = function(event) {
 	fitSiteBodyToScreen();
