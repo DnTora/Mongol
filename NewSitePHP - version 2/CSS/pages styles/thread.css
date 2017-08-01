@@ -1,0 +1,104 @@
+#imageButton_newThreadMessage {
+	
+}
+#imageButton_newThreadMessage:hover {
+	cursor:pointer;
+}
+#imageButton_deleteThread {
+	
+}
+#imageButton_deleteThread:hover {
+	cursor:pointer;
+}
+#div_thread {
+	width:100%;
+}
+	#div_threadDetails {
+		width:100%;
+		float:left;
+		margin:0px 0px 10px 0px;
+	}
+		#div_threadTitle {
+			background-color:#00a2e8;
+		}
+		#div_threadContent {
+			background-color:#0091ce;
+		}
+
+	.div_threadMessage {
+		width:100%;
+		float:left;
+		margin:0px 0px 10px 0px;
+	}
+		.div_messageTitle {
+			background-color:#b5e61d;
+		}
+			.form_messageDelete {
+				
+			}
+		.div_messageContent {
+			background-color:#a6d517;
+		}
+#div_newThreadMessagePopUp {
+	display:none;
+	background-color:RGBA(100, 100, 100, 0.8);
+	width:100%;
+	height:100%;
+	position:fixed;
+	left:0px;
+	top:0px;
+}
+	#div_newThreadMessageWindow {
+		background-color:white;
+		border:1px solid;
+		width:630px;
+		height:450px;
+		position:fixed;
+		left:0px;
+		top:0px;
+	}
+		#div_newThreadMessageWindowTitle {
+			background-color:orange;
+			border:1px solid;
+		}
+		#div_newThreadMessageWindowContent {
+			
+		}
+			#textBox_newThreadMessageTitle {
+				width:100%;
+			}
+			#textArea_newThreadMessageContent {
+				width:100%;
+				height:200px;
+			}
+			#button_submitThreadMessage {
+				width:100%;
+			}
+#div_threadDeletePopUp {
+	display:none;
+	background-color:RGBA(100, 100, 100, 0.8);
+	width:100%;
+	height:100%;
+	position:fixed;
+	left:0px;
+	top:0px;
+}
+	#div_threadDeleteWindow {
+		background-color:white;
+		border:1px solid;
+		width:400px;
+		height:220px;
+		position:fixed;
+		left:0px;
+		top:0px;
+	}
+		#div_threadDeleteWindowTitle {
+			background-color:orange;
+			border:1px solid;
+		}
+		#div_threadDeleteWindowContent {
+			
+		}
+			#form_threadDelete {
+				
+			}
