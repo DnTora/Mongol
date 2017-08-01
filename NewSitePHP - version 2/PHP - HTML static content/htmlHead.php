@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -7,4 +10,7 @@
 		<link rel="stylesheet" href="CSS/header.css" />
 		<link rel="stylesheet" href="CSS/main.css" />
 		<link rel="stylesheet" href="CSS/footer.css" />
+		
+		<link rel="stylesheet" href="CSS/pages styles/forum.css" />
+		<link rel="stylesheet" href="CSS/pages styles/thread.css" />
 	</head>

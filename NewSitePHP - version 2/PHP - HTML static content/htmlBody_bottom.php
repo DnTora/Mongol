@@ -1,10 +1,11 @@
+<!--//////////////////////////////////////////////////// HIDDEN STATIC CONTENT ///////////////////////////////////////////////////-->
 			<div id="div_registerationPopUp">
 				<div id="div_registerationWindow">
-					<div id="div_registerationTitle" align="center">
-						<image id="imageButton_close" src="resources/images/closeButton.png" onclick="toggleRegisterationWindow();"></image>
+					<div id="div_registerationWindowTitle" align="center">
+						<image class="imageButton_close" src="resources/images/closeButton.png" onclick="togglePopUpWindowAreaVisibility('div_registerationPopUp');"></image>
 						<h2>הרשמה</h2>
 					</div>
-					<div id="div_registerationContent" align="center">
+					<div id="div_registerationWindowContent" align="center">
 						<br />
 						<br />
 						<form id="form_registeration" method="POST" action="PHP/register.php">
@@ -51,14 +52,17 @@
 						</form>
 						<?php
 							if (isset($_COOKIE['registeration_errorData'])) {
-								echo '<br />';
-								echo '<p style="color:black; background-color:red; font-weight:bold;">' . $_COOKIE['registeration_errorData'] . '</p>';
+								echo
+									'<br />';
+								echo
+									'<p style="color:black; background-color:red; font-weight:bold;">' . $_COOKIE['registeration_errorData'] . '</p>';
 							}
 						?>
 					</div>
 				</div>
 			</div>
 		</div>
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 		<script src="JS/script.js"></script>
-	</body>
+	</body></center>
 </html>
