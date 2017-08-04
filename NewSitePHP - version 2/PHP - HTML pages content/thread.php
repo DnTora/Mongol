@@ -8,7 +8,7 @@
 <!--//////////////////////////////////////////////////////// PAGE CONTENT ////////////////////////////////////////////////////////-->
 									<?php
 										include_once 'PHP/databaseConnect.php';
-										include_once 'PHP/queries/queries.php';
+										include_once 'PHP/queries/queries_thread.php';
 										$threadExist = false;
 										$userLoggedIn = false;
 										$ownerOfThread = false;
@@ -52,7 +52,10 @@
 																	<td><h4>' . $row_thread['thread_title'] . '</h4></td>
 																	<td style="float:left">
 																		<h5>' . $userName . '</h5>
-																		<h6>' . $row_thread['thread_date'] . '</h6>
+																		<script>
+																			var time = new Date(' . strtotime($row_thread['thread_date']) . ' * 1000);
+																			document.write("<h6 style=\"float:left\">" + time.toLocaleString() + "</h6>");
+																		</script>
 																	</td>
 																</tr>
 															</table>
@@ -62,9 +65,9 @@
 														</div>
 													</div>
 													<hr />';
-													
-												$result_threadMessages = getThreadMessagesInformation($databaseConnect, $_GET['threadId']);
+												
 												if (!isThreadEmpty($databaseConnect, $_GET['threadId'])) {
+													$result_threadMessages = getThreadMessagesInformation($databaseConnect, $_GET['threadId']);
 													while ($row_threadMessages = mysqli_fetch_assoc($result_threadMessages)) {
 														$userName = getUserName($databaseConnect, $row_threadMessages['user_account_number']);
 														echo
@@ -89,7 +92,10 @@
 														echo
 																			'<td style="float:left">
 																				<h5>' . $userName . '</h5>
-																				<h6>' . $row_threadMessages['message_date'] . '</h6>
+																				<script>
+																					var time = new Date(' . strtotime($row_threadMessages['message_date']) . ' * 1000);
+																					document.write("<h6 style=\"float:left\">" + time.toLocaleString() + "</h6>");
+																				</script>
 																			</td>
 																		</tr>
 																	</table>

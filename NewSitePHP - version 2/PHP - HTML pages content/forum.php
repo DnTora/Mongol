@@ -12,27 +12,28 @@
 										if (isset($_SESSION['userAccountNumber']))
 											echo '<img id="imageButton_newThread" src="resources/images/newThreadButton.png" onclick="togglePopUpWindowAreaVisibility(\'div_newThreadPopUp\')"></img>';
 										else
-											echo '<p>אנא התחברו או הרשמו לאתר כדי שתוכלו לכתוב הודעות בפורום</p>';
+											echo '<p>אנא התחברו או הרשמו לאתר כדי שתוכלו ליצור אשכולות בפורום</p>';
 									?>
 									<hr />
 									<div id="div_forum">
 										<?php
 											include_once 'PHP/databaseConnect.php';
-											$sql = 'SELECT * FROM forum_threads ORDER BY thread_date';
-											$result = mysqli_query($databaseConnect, $sql);
-											if (mysqli_num_rows($result) > 0) {
-												while ($row = mysqli_fetch_assoc($result)) {
-													$sql2 = "SELECT user_name FROM users WHERE user_account_number = " . $row['user_account_number'];
-													$result2 = mysqli_query($databaseConnect, $sql2);
-													$userName = mysqli_fetch_array($result2)[0];
+											include_once 'PHP/queries/queries_forum.php';
+											if (!isForumEmpty($databaseConnect)) {
+												$result_threads = getAllThreadsInformation($databaseConnect);
+												while ($row_threads = mysqli_fetch_assoc($result_threads)) {
+													$userName = getUserName($databaseConnect, $row_threads['user_account_number']);
 													echo
-														'<div class="div_forumThread" onclick="location.href=\'thread.php?threadId=' . $row['thread_id'] . '\'";">
+														'<div class="div_forumThread" onclick="location.href=\'thread.php?threadId=' . $row_threads['thread_id'] . '\'";">
 															<table style="width:100%">
 																<tr>
-																	<td><h4>' . $row['thread_title'] . '</h4></td>
+																	<td><h4>' . $row_threads['thread_title'] . '</h4></td>
 																	<td style="float:left">
 																		<h5>' . $userName . '</h5>
-																		<h6 style="float:left">' . $row['thread_date'] . '</h6>
+																		<script>
+																			var time = new Date(' . strtotime($row_threads['thread_date']) . ' * 1000);
+																			document.write("<h6 style=\"float:left\">" + time.toLocaleString() + "</h6>");
+																		</script>
 																	</td>
 																</tr>
 															</table>
