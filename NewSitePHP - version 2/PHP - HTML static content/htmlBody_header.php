@@ -10,6 +10,7 @@
 							<td class="navigationBarButton"><a href="index.php">דף הבית</a></td>
 							<td class="navigationBarButton"><a href="forum.php">פורום</a></td>
 							<td class="navigationBarButton"><a href="contact.php">צור קשר</a></td>
+							<td class="navigationBarButton"><a href="order.php">הזמנה</a></td>
 							<td class="navigationBarButton"><a href="about.php">אודות</a></td>
 						</tr>
 					</table>

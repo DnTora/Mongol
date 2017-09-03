@@ -13,4 +13,5 @@
 		
 		<link rel="stylesheet" href="CSS/pages styles/forum.css" />
 		<link rel="stylesheet" href="CSS/pages styles/thread.css" />
+		<link rel="stylesheet" href="CSS/pages styles/order.css" />
 	</head>
