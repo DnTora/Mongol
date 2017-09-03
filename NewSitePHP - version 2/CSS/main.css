@@ -11,7 +11,7 @@
 		#div_rightTootbar {
 			width:100%;
 			height:100%;
-			background-color:#777f7f;
+			background-color:#4b5987;
 			float:right;
 			border-left:1px solid black;
 			margin: 0px 0px 0px 20px;
@@ -21,7 +21,7 @@
 			background-color:#fffedd;
 		}
 			#div_loginArea {
-				background-color:brown;
+				background-color:#8fb8fc;
 				margin:5px 5px 5px 5px;
 				border:1px solid;
 			}
@@ -50,13 +50,13 @@
 				#title_whatsNew {
 					border:1px solid;
 					margin:0px 5px 0px 5px;
-					background-color:#399906;
+					background-color:#2675f9;
 				}
 				#marquee_whatsNew {
 					margin:0px 5px 0px 5px;
 					width:100%-5px;
 					height:200px;
-					background-color:#80f442;
+					background-color:#508ffa;
 					border:1px solid;
 				}
 		#div_pageContent {

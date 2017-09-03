@@ -1,5 +1,5 @@
 body {
-	background-color:#9b9b9b;
+	background-image:url("../resources/images/background.png");
 }
 h1 {
 	font-size:60px;
@@ -67,9 +67,12 @@ hr {
 				#div_registerationWindowContent {
 					
 				}
-					.registerationTextBox {
-						width:60%;
+					#form_registeration {
+						
 					}
-					#button_register {
-						width:50%;
-					}
+						.registerationTextBox {
+							width:60%;
+						}
+						#button_register {
+							width:50%;
+						}
