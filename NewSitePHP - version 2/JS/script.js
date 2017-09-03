@@ -125,6 +125,20 @@ window.onload = function(event) {
 			deleteCookie("registeration_errorData");
 		}
 	}
+	
+	var order_textBoxData = getCookieValue("order_textBoxData");
+	if (order_textBoxData != null) {
+		var order_textBoxDataArray = order_textBoxData.split("|");
+		document.getElementById("form_order").elements["fullName"].value = order_textBoxDataArray[0];
+		document.getElementById("form_order").elements["age"].value = order_textBoxDataArray[1];
+		document.getElementById("form_order").elements["emailAddress"].value = order_textBoxDataArray[2];
+		document.getElementById("form_order").elements["phoneNumber"].value = order_textBoxDataArray[3];
+		document.getElementById("form_order").elements["order"].checked = order_textBoxDataArray[4];
+		document.getElementById("form_order").elements["notes"].value = order_textBoxDataArray[5];
+		deleteCookie("order_textBoxData");
+		deleteCookie("order_errorData");
+	}
+	deleteCookie("order_successData"); // (?) פתרון זמני
 }
 window.onresize = function(event) {
 	fitSiteBodyToScreen();
