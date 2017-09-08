@@ -1,0 +1,42 @@
+#div_header {
+	width:100%;
+	border:1px solid;
+	background-color:white;
+	text-align:right;
+}
+	#div_siteTitle {
+		
+	}
+		#image_logo {
+			display:block;
+			margin:auto;
+		}
+	#div_navigationBar {
+		width:100%;
+	}
+		#table_navigationBar {
+			border:1px solid;
+		}
+			.navigationBarButton a {
+				font-size:21px;
+				color:white;
+				background-color:#0f4f95;
+				display:block;
+				/* קביעת הגודל של כל ריבוע בתפריט */
+				text-shadow:1px 1px black;
+			}
+			/* שינוי כל סימון של ריבוע */
+			.navigationBarButton a:link {
+				background-color:#0f4f95;
+				color:white;
+				text-decoration:none;
+			}
+			.navigationBarButton a:hover {
+				background-color:#0f4f95;
+				color:white;
+				text-decoration:none;
+			}
+			.navigationBarButton {
+				width:1%;
+				text-align:center;
+			}
