@@ -1,0 +1,19 @@
+#div_whatsNew {
+	width:280px;
+	float:left;
+}
+	#div_whatsNewTitle {
+		border:1px solid;
+		margin:0px;
+		background-color:#a0a0a0;
+	}
+	#div_whatsNewContent {
+		margin:0px;
+		padding:3px;
+		height:200px;
+		background-color:#b6b6b6;
+		border:1px solid;
+	}
+		#marquee_whatsNew {
+			height:100%;
+		}
