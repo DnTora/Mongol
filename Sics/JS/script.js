@@ -31,6 +31,10 @@ window.onload = function(event) {
 		togglePopUpWindowAreaVisibility("div_registerationPopUp");
 		deleteCookie("registeration_status");
 	}
+	if (getCookieValue("accountUpdate_status") != null) {
+		togglePopUpWindowAreaVisibility("div_accountUpdatePopUp");
+		deleteCookie("accountUpdate_status");
+	}
 	deleteCookie("order_status");
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
