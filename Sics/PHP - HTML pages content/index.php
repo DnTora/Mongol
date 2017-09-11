@@ -11,7 +11,6 @@
 											<marquee id="marquee_whatsNew" direction="up" scrolldelay=250>
 												<ul>
 													<li><p>הספר יצא לאור, ניתן לבצע הזמנות!</p></li>
-													<li><p style="color:red">שימו לב! כרגע אין אפשרות לשנות פרטי משתמש. אפשרות זו תהיה זמינה בקרוב.</p></li>
 												</ul>
 											</marquee>
 										</div>

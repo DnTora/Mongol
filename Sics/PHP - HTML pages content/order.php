@@ -9,6 +9,15 @@
 									<h1>הזמנה</h1>
 									<hr />
 									<div id="div_orderArea">
+										<?php
+											if (isset($_COOKIE['order_status'])) {
+												if ($_COOKIE['order_status'] == 'ההזמנה נשלחה בהצלחה!')
+													echo '<p style="color:black; background-color:#96ff9b; font-weight:bold; text-align:center;">' . $_COOKIE['order_status'] . '</p>';
+												else
+													echo '<p style="color:black; background-color:#ff9696; font-weight:bold; text-align:center;">' . $_COOKIE['order_status'] . '</p>';
+												echo '<br />';
+											}
+										?>
 										<form id="form_order" method="POST" action="PHP/sendOrder.php">
 											<table style="width:100%">
 												<tr>
@@ -68,15 +77,6 @@
 											<p style="color:red">* שדות חובה</p>
 											<button class="btn btn-success btn-block" id="button_order" name="submit">שלח בקשה להזמנה</button>
 										</form>
-										<?php
-											if (isset($_COOKIE['order_status'])) {
-												echo '<br />';
-												if ($_COOKIE['order_status'] == 'ההזמנה נשלחה בהצלחה!')
-													echo '<p style="color:black; background-color:#96ff9b; font-weight:bold;">' . $_COOKIE['order_status'] . '</p>';
-												else
-													echo '<p style="color:black; background-color:#ff9696; font-weight:bold;">' . $_COOKIE['order_status'] . '</p>';
-											}
-										?>
 									</div>
 <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 								</div>
