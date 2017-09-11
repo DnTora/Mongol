@@ -4,6 +4,9 @@
 		if (empty($_POST['fullName']) || empty($_POST['emailAddress'])) {
 			setcookie("order_status", "שימו לב: אחד או יותר משדות החובה לא מולאו!", time() + 10, "/");
 			$status = 'order=empty';
+		} elseif (!empty($_POST['phoneNumber']) && !preg_match("/([0-9])/", $_POST['phoneNumber'])) {
+			setcookie("order_status", "שימו לב: מספר הטלפון לא תקין!", time() + 10, "/");
+			$status = 'order=invalidPhoneNumber';
 		} elseif (!isset($_POST['order'])) { // כשיש ספר חדש אז צריך להוסיף
 			setcookie("order_status", "שימו לב: לא נבחרו פריטים להזמנה!", time() + 10, "/");
 			$status = 'order=noSelection';
