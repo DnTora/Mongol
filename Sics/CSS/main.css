@@ -25,17 +25,14 @@
 				margin:5px 5px 5px 5px;
 				border:1px solid;
 			}
-				#table_loginAreaFields {
-					width:100%;
-				}
-				#table_loginAreaButtons {
-					width:100%;
+				#form_login {
+					
 				}
 				#div_loginAreaWelcomeMessage {
 					text-align:center;
 				}
-				#button_logout {
-					margin:5px 5px 5px 5px;
+				#form_logout {
+					
 				}
 		#div_pageContent {
 			padding:10px;

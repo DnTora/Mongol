@@ -53,12 +53,11 @@ table {
 				height:646px;
 				position:fixed;
 				left:calc(50% - 315px);
-				top:calc(50% - 328px);
+				top:calc(50% - 323px);
 			}
 				#div_registerationWindowTitle {
 					background-color:#5d9afc;
 					border:1px solid;
-					text-align:center;
 				}
 					#imageButton_close {
 						position:absolute;
@@ -69,13 +68,53 @@ table {
 						cursor:pointer;
 					}
 				#div_registerationWindowContent {
-					text-align:center;
+					
 				}
 					#form_registeration {
 						width:60%;
 						margin:auto;
-						text-align:right;
 					}
 						.tableData_registerationInput {
+							width:50%;
+						}
+		#div_accountUpdatePopUp {
+			display:none;
+			background-color:RGBA(100, 100, 100, 0.8);
+			width:100%;
+			height:100%;
+			position:fixed;
+			left:0px;
+			top:0px;
+		}
+			#div_accountUpdateWindow {
+				background-color:white;
+				border:1px solid;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+				width:630px;
+				height:726px;
+				position:fixed;
+				left:calc(50% - 315px);
+				top:calc(50% - 363px);
+			}
+				#div_accountUpdateWindowTitle {
+					background-color:#5d9afc;
+					border:1px solid;
+				}
+					#imageButton_close {
+						position:absolute;
+						right:10px;
+						top:10px;
+					}
+					#imageButton_close:hover {
+						cursor:pointer;
+					}
+				#div_accountUpdateWindowContent {
+					
+				}
+					#form_accountUpdate {
+						width:60%;
+						margin:auto;
+					}
+						.tableData_accountUpdateInput {
 							width:50%;
 						}
