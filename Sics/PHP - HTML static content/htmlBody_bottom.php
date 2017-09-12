@@ -138,7 +138,12 @@
 										<br />
 										<br />
 										<p style="color:red">* שדות חובה</p>
-										<button class="btn btn-success btn-block" name="submit">עדכון</button>
+										<table>
+											<tr>
+												<td style="width:80%"><button class="btn btn-success btn-block" name="submit">עדכון</button></td>
+												<td><input class="btn btn-sm btn-link btn-xs" type="button" value="מחיקת חשבון" onclick="togglePopUpWindowAreaVisibility(\'div_accountDeleteConfirmationPopUp\');" style="color:red" /></td>
+											</tr>
+										</table>
 									</form>';
 					if (isset($_COOKIE['accountUpdate_status'])) {
 						echo '<br />';
@@ -148,6 +153,30 @@
 							echo '<p style="color:black; background-color:#ff9696; font-weight:bold; text-align:center;">' . $_COOKIE['accountUpdate_status'] . '</p>';
 					}	
 					echo		'</div>
+							</div>
+						</div>';
+					
+					
+					echo
+						'<div id="div_accountDeleteConfirmationPopUp">
+							<div id="div_accountDeleteConfirmationWindow">
+								<div id="div_accountDeleteConfirmationWindowTitle">
+									<img id="imageButton_close" src="resources/images/closeButton.png" onclick="togglePopUpWindowAreaVisibility(\'div_accountDeleteConfirmationPopUp\');" alt="closeButton" />
+									<h2 style="text-align:center">אישור מחיקת חשבון</h2>
+								</div>
+								<div id="div_accountDeleteConfirmationWindowContent">
+									<br />
+									<br />
+									<p style="text-align:center">האם למחוק את החשבון?</p>
+									<form id="form_accountDelete" method="POST" action="PHP/deleteAccount.php">
+										<table style="width:40%; margin:auto;">
+											<tr>
+												<td><button name="submit" class="btn btn-danger btn-block">אישור</button></td>
+												<td><input class="btn btn-primary btn-block" type="button" value="ביטול" onclick="togglePopUpWindowAreaVisibility(\'div_accountDeleteConfirmationPopUp\');" /></td>
+											</tr>
+										</table>
+									</form>
+								</div>
 							</div>
 						</div>';
 				}
