@@ -118,11 +118,6 @@ table {
 						.tableData_accountUpdateInput {
 							width:50%;
 						}
-					#form_accountDelete {
-						width:60%;
-						margin:auto;
-						text-align:left;
-					}
 		#div_accountDeleteConfirmationPopUp {
 			display:none;
 			background-color:RGBA(100, 100, 100, 0.8);
@@ -137,10 +132,10 @@ table {
 				border:1px solid;
 				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
 				width:520px;
-				height:220px;
+				height:374px;
 				position:fixed;
 				left:calc(50% - 260px);
-				top:calc(50% - 110px);
+				top:calc(50% - 187px);
 			}
 				#div_accountDeleteConfirmationWindowTitle {
 					background-color:#5d9afc;
@@ -161,3 +156,6 @@ table {
 						width:60%;
 						margin:auto;
 					}
+						.tableData_accountDeleteInput {
+							width:50%;
+						}
