@@ -12,7 +12,7 @@
 		elseif($password!==$passwordRepeat)
 			setcookie("registeration_status", "שימו לב: הסיסמאות לא תואמות!", time() + 10, "/");
 		elseif(!preg_match("/([a-zA-Z0-9])/", $userName) || strlen($userName) <= 2)
-			setcookie("registeration_status", "שימו לב: שם המשתמש חייב להכיל רק אותיות באנגלית ומספרים ואורכו צריך להיות 3 אותיות ומעלה!", time() + 10, "/");
+			setcookie("registeration_status", "שימו לב: שם המשתמש קצר או לא תקין! (תווים תקניים: A-Z, a-z, 0-9)", time() + 10, "/");
 		elseif(!filter_var($emailAddress, FILTER_VALIDATE_EMAIL) && !empty($emailAddress))
 			setcookie("registeration_status", "שימו לב: האימייל לא תקין!", time() + 10, "/");
 		else {

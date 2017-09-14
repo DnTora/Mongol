@@ -22,7 +22,7 @@
 		elseif (!filter_var($emailAddress, FILTER_VALIDATE_EMAIL) && !empty($emailAddress))
 			setcookie("accountUpdate_status", "שימו לב: האימייל לא תקין!", time() + 10, "/");
 		elseif (!password_verify($currentPassword, $row['password']))
-			setcookie("accountUpdate_status", "שימו לב: הסיסמה הנוכחית שגויה!", time() + 10, "/");
+			setcookie("accountUpdate_status", "שימו לב: הסיסמה שגויה!", time() + 10, "/");
 		else {
 			if (isUserNameExist($databaseConnect, $userName) && $row['user_name'] != $userName)
 				setcookie("accountUpdate_status", "שימו לב: שם המשתמש תפוס!", time() + 10, "/");

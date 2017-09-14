@@ -5,7 +5,7 @@
 		$userName = mysqli_real_escape_string($databaseConnect, $_POST['userName']);
 		$password = mysqli_real_escape_string($databaseConnect, $_POST['password']);
 		if(empty($userName) || empty($password))
-			setcookie("login_status", "שימו לב: אחד או יותר משדות החובה לא מולאו!", time() + 10, "/");
+			setcookie("login_status", "שימו לב: יש להזין שם משתמש וסיסמה!", time() + 10, "/");
 		else {
 			$sql = "SELECT * FROM users WHERE user_name='$userName'";
 			$result = mysqli_query($databaseConnect, $sql);
