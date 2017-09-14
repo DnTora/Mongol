@@ -33,9 +33,21 @@
 											} else {
 												echo
 													'<div id="div_loginAreaWelcomeMessage">
-														<p>ברוך הבא, ' . $_SESSION['userName'] . '</p>
+														<p style="text-align:center">ברוך הבא, ' . $_SESSION['userName'] . '</p>
 														<hr />
-														
+														<p style="font-size:15px; padding:5px;">
+															שימו לב! כדי לקבל גישה מלאה להסברים של הספר יש לרכוש אותו!
+															<br />
+															(כרגע יש ליצור איתנו קשר כדי לעדכן את סטטוס הרכישה בחשבון, בקרוב זה יסודר)
+															<br />
+															<br />
+															לרשותכם 2 מתכונות חינמיות הלקוחות מתוך הספר:
+														</p>
+														<ul>
+															<li><a href="resources/documents/matkonet1.pdf">מתכונת 1</a></li>
+															<li><a href="resources/documents/matkonet2.pdf">מתכונת 2</a></li>
+														</ul>
+														<hr />
 													</div>
 													<form id="form_logout" method="POST" action="PHP/logout.php">
 														<table>

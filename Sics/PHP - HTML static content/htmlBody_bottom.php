@@ -71,6 +71,7 @@
 						</div>';
 				}
 				
+				
 				if (isset($_SESSION['userAccountNumber'])) {
 					include_once 'PHP/databaseConnect.php';
 					$sql = "SELECT * FROM users WHERE user_account_number=" . $_SESSION['userAccountNumber'];
@@ -131,7 +132,7 @@
 										<hr />
 										<table>
 											<tr>
-												<td><p><span style="color:red">*</span> סיסמה נוכחית:</p></td>
+												<td><p><span style="color:red">*</span><b> סיסמה נוכחית:</b></p></td>
 												<td class="tableData_accountUpdateInput"><input class="form-control" type="password" name="currentPassword" /></td>
 											</tr>
 										</table>
@@ -155,8 +156,10 @@
 					echo		'</div>
 							</div>
 						</div>';
-					
-					
+				}
+				
+				
+				if (isset($_SESSION['userAccountNumber'])) {
 					echo
 						'<div id="div_accountDeleteConfirmationPopUp">
 							<div id="div_accountDeleteConfirmationWindow">
@@ -167,16 +170,30 @@
 								<div id="div_accountDeleteConfirmationWindowContent">
 									<br />
 									<br />
-									<p style="text-align:center">האם למחוק את החשבון?</p>
+									<p style="text-align:center; margin-bottom:0px">האם למחוק את החשבון?</p>
+									<p style="font-size:13px; text-align:center; color:red">פעולה זאת אינה ניתנת לביטול!</p>
+									<br />
 									<form id="form_accountDelete" method="POST" action="PHP/deleteAccount.php">
+										<table>
+											<tr>
+												<td><p>סיסמה נוכחית:</p></td>
+												<td class="tableData_accountDeleteInput"><input class="form-control" type="password" name="currentPassword" /></td>
+											</tr>
+										</table>
+										<br />
+										<br />
 										<table style="width:40%; margin:auto;">
 											<tr>
 												<td><button name="submit" class="btn btn-danger btn-block">אישור</button></td>
 												<td><input class="btn btn-primary btn-block" type="button" value="ביטול" onclick="togglePopUpWindowAreaVisibility(\'div_accountDeleteConfirmationPopUp\');" /></td>
 											</tr>
 										</table>
-									</form>
-								</div>
+									</form>';
+					if (isset($_COOKIE['accountDeleteConfirmation_status'])) {
+						echo '<br />';
+						echo '<p style="color:black; background-color:#ff9696; font-weight:bold; text-align:center;">' . $_COOKIE['accountDeleteConfirmation_status'] . '</p>';
+					}
+					echo		'</div>
 							</div>
 						</div>';
 				}
