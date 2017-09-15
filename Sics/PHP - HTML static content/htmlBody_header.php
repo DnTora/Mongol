@@ -1,4 +1,4 @@
-	<body dir="rtl">
+	<body>
 		<div id="div_container">
 			<header>
 				<div id="div_header">

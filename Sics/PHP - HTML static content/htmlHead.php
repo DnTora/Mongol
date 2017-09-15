@@ -2,8 +2,9 @@
 	session_start();
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="he" dir="rtl">
 	<head>
+		<meta charset="utf-8" />
 		<title>Sics</title>
 		<link rel="stylesheet" href="resources/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="CSS/global.css" />
