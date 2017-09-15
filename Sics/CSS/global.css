@@ -30,6 +30,14 @@ hr {
 table {
 	width:100%;
 }
+.imageButton_close {
+	position:absolute;
+	right:10px;
+	top:10px;
+}
+.imageButton_close:hover {
+	cursor:pointer;
+}
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 	#div_container {
@@ -59,14 +67,6 @@ table {
 					background-color:#5d9afc;
 					border:1px solid;
 				}
-					#imageButton_close {
-						position:absolute;
-						right:10px;
-						top:10px;
-					}
-					#imageButton_close:hover {
-						cursor:pointer;
-					}
 				#div_registerationWindowContent {
 					
 				}
@@ -100,14 +100,6 @@ table {
 					background-color:#5d9afc;
 					border:1px solid;
 				}
-					#imageButton_close {
-						position:absolute;
-						right:10px;
-						top:10px;
-					}
-					#imageButton_close:hover {
-						cursor:pointer;
-					}
 				#div_accountUpdateWindowContent {
 					
 				}
@@ -141,14 +133,6 @@ table {
 					background-color:#5d9afc;
 					border:1px solid;
 				}
-					#imageButton_close {
-						position:absolute;
-						right:10px;
-						top:10px;
-					}
-					#imageButton_close:hover {
-						cursor:pointer;
-					}
 				#div_accountDeleteConfirmationWindowContent {
 					
 				}
