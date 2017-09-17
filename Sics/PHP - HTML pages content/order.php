@@ -1,4 +1,4 @@
-							<td style="vertical-align:top">
+							<td id="tableData_pageContent">
 								<div id="div_pageNavigationGuide">
 <!--//////////////////////////////////////////////////// PAGE NAVIGATION GUIDE ///////////////////////////////////////////////////-->
 										<p><a href="index.php">דף הבית</a> > הזמנה</p>
@@ -19,32 +19,32 @@
 											}
 										?>
 										<form id="form_order" method="POST" action="PHP/sendOrder.php">
-											<table style="width:100%">
+											<table>
 												<tr>
 													<td><p><span style="color:red">*</span> שם מלא:</p></td>
 													<td class="tableData_orderInput"><input type="text" class="form-control" name="fullName" style="width:100%" /></td>
 												</tr>
 											</table>
 											<br />
-											<table style="width:100%">
+											<table>
 												<tr>
 													<td><p><span style="color:red">*</span> אימייל:</p></td>
 													<td class="tableData_orderInput"><input type="text" class="form-control" name="emailAddress" style="width:100%" /></td>
 												</tr>
 											</table>
 											<br />
-											<table style="width:100%">
+											<table>
 												<tr>
 													<td><p>  מספר טלפון:</p></td>
 													<td class="tableData_orderInput"><input type="text" class="form-control" name="phoneNumber" style="width:100%" /></td>
 												</tr>
 											</table>
 											<br />
-											<table style="width:100%">
+											<table>
 												<tr style="vertical-align:top">
 													<td><p><span style="color:red">*</span> ספרים להזמנה:</p></td>
 													<td class="tableData_orderInput">
-														<table>
+														<table style="width:auto">
 															<tr>
 																<td><label><input type="checkbox" name="order" value="מתכונת במדעי המחשב" /> מתכונת במדעי המחשב</label></td>
 																<td><img src="resources/images/computer_sience_book_SMALL.png" alt="תמונה (מתכונת במדעי המחשב)" /></td>
@@ -54,14 +54,14 @@
 												</tr>
 											</table>
 											<br />
-											<table style="width:100%">
+											<table>
 												<tr>
 													<td><p>  הערות:</p></td>
 													<td class="tableData_orderInput"><input type="text" class="form-control" name="notes" style="width:100%" /></td>
 												</tr>
 											</table>
 											<br />
-											<table style="width:100%">
+											<table>
 												<tr style="vertical-align:top">
 													<td><p>  סוג רכישה:</p></td>
 													<td class="tableData_orderInput">

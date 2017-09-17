@@ -1,4 +1,4 @@
-<td style="vertical-align:top">
+							<td id="tableData_pageContent">
 								<div id="div_pageContent">
 <!--//////////////////////////////////////////////////////// PAGE CONTENT ////////////////////////////////////////////////////////-->
 									<h1>דף הבית</h1>

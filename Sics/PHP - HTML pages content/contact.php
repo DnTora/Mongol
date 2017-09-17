@@ -1,4 +1,4 @@
-							<td style="vertical-align:top">
+							<td id="tableData_pageContent">
 								<div id="div_pageNavigationGuide">
 <!--//////////////////////////////////////////////////// PAGE NAVIGATION GUIDE ///////////////////////////////////////////////////-->
 										<p><a href="index.php">דף הבית</a> > צור קשר</p>
