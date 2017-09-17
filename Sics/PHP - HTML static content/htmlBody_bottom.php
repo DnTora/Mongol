@@ -5,12 +5,18 @@
 						'<div id="div_registerationPopUp">
 							<div id="div_registerationWindow">
 								<div id="div_registerationWindowTitle">
-									<img class="imageButton_close" src="resources/images/closeButton.png" onclick="togglePopUpWindowAreaVisibility(\'div_registerationPopUp\');" alt="closeButton" />
+									<img class="imageButton_close" src="resources/images/closeButton.png" onclick="toggleDivVisibility(\'div_registerationPopUp\');" alt="closeButton" />
 									<h2 style="text-align:center">הרשמה</h2>
 								</div>
-								<div id="div_registerationWindowContent">
-									<br />
-									<br />
+								<div id="div_registerationWindowContent">';
+					if (isset($_COOKIE['registeration_status'])) {
+						if ($_COOKIE['registeration_status'] == 'ההרשמה בוצעה בהצלחה!')
+							echo '<p style="color:black; background-color:#96ff9b; font-weight:bold; text-align:center;">' . $_COOKIE['registeration_status'] . '</p>';
+						else
+							echo '<p style="color:black; background-color:#ff9696; font-weight:bold; text-align:center;">' . $_COOKIE['registeration_status'] . '</p>';
+					} else
+						echo '<br />';
+					echo			'<br />
 									<form id="form_registeration" method="POST" action="PHP/register.php">
 										<table>
 											<tr>
@@ -58,15 +64,8 @@
 										<br />
 										<p style="color:red">* שדות חובה</p>
 										<button class="btn btn-success btn-block" name="submit">הרשמה</button>
-									</form>';
-					if (isset($_COOKIE['registeration_status'])) {
-						echo '<br />';
-						if ($_COOKIE['registeration_status'] == 'ההרשמה בוצעה בהצלחה!')
-							echo '<p style="color:black; background-color:#96ff9b; font-weight:bold; text-align:center;">' . $_COOKIE['registeration_status'] . '</p>';
-						else
-							echo '<p style="color:black; background-color:#ff9696; font-weight:bold; text-align:center;">' . $_COOKIE['registeration_status'] . '</p>';
-					}	
-					echo		'</div>
+									</form>
+								</div>
 							</div>
 						</div>';
 				}
@@ -81,12 +80,18 @@
 						'<div id="div_accountUpdatePopUp">
 							<div id="div_accountUpdateWindow">
 								<div id="div_accountUpdateWindowTitle">
-									<img class="imageButton_close" src="resources/images/closeButton.png" onclick="togglePopUpWindowAreaVisibility(\'div_accountUpdatePopUp\');" alt="closeButton" />
+									<img class="imageButton_close" src="resources/images/closeButton.png" onclick="toggleDivVisibility(\'div_accountUpdatePopUp\');" alt="closeButton" />
 									<h2 style="text-align:center">שינוי פרטי חשבון</h2>
 								</div>
-								<div id="div_accountUpdateWindowContent">
-									<br />
-									<br />
+								<div id="div_accountUpdateWindowContent">';
+					if (isset($_COOKIE['accountUpdate_status'])) {
+						if ($_COOKIE['accountUpdate_status'] == 'הפרטים שונו בהצלחה!')
+							echo '<p style="color:black; background-color:#96ff9b; font-weight:bold; text-align:center;">' . $_COOKIE['accountUpdate_status'] . '</p>';
+						else
+							echo '<p style="color:black; background-color:#ff9696; font-weight:bold; text-align:center;">' . $_COOKIE['accountUpdate_status'] . '</p>';
+					} else
+						echo '<br />';
+					echo			'<br />
 									<form id="form_accountUpdate" method="POST" action="PHP/updateAccount.php">
 										<table>
 											<tr>
@@ -142,18 +147,11 @@
 										<table>
 											<tr>
 												<td style="width:80%"><button class="btn btn-success btn-block" name="submit">עדכון</button></td>
-												<td><input class="btn btn-link btn-xs" type="button" value="מחיקת חשבון" onclick="togglePopUpWindowAreaVisibility(\'div_accountDeleteConfirmationPopUp\');" style="color:red" /></td>
+												<td><input class="btn btn-link btn-xs" type="button" value="מחיקת חשבון" onclick="toggleDivVisibility(\'div_accountDeleteConfirmationPopUp\');" style="color:red" /></td>
 											</tr>
 										</table>
-									</form>';
-					if (isset($_COOKIE['accountUpdate_status'])) {
-						echo '<br />';
-						if ($_COOKIE['accountUpdate_status'] == 'הפרטים שונו בהצלחה!')
-							echo '<p style="color:black; background-color:#96ff9b; font-weight:bold; text-align:center;">' . $_COOKIE['accountUpdate_status'] . '</p>';
-						else
-							echo '<p style="color:black; background-color:#ff9696; font-weight:bold; text-align:center;">' . $_COOKIE['accountUpdate_status'] . '</p>';
-					}	
-					echo		'</div>
+									</form>
+								</div>
 							</div>
 						</div>';
 				}
@@ -164,12 +162,15 @@
 						'<div id="div_accountDeleteConfirmationPopUp">
 							<div id="div_accountDeleteConfirmationWindow">
 								<div id="div_accountDeleteConfirmationWindowTitle">
-									<img class="imageButton_close" src="resources/images/closeButton.png" onclick="togglePopUpWindowAreaVisibility(\'div_accountDeleteConfirmationPopUp\');" alt="closeButton" />
-									<h2 style="text-align:center">אישור מחיקת חשבון</h2>
+									<img class="imageButton_close" src="resources/images/closeButton.png" onclick="toggleDivVisibility(\'div_accountDeleteConfirmationPopUp\');" alt="closeButton" />
+									<h2 style="text-align:center">מחיקת חשבון</h2>
 								</div>
-								<div id="div_accountDeleteConfirmationWindowContent">
-									<br />
-									<br />
+								<div id="div_accountDeleteConfirmationWindowContent">';
+					if (isset($_COOKIE['accountDeleteConfirmation_status']))
+						echo '<p style="color:black; background-color:#ff9696; font-weight:bold; text-align:center;">' . $_COOKIE['accountDeleteConfirmation_status'] . '</p>';
+					else
+						echo '<br />';
+					echo			'<br />
 									<p style="text-align:center; margin-bottom:0px">האם למחוק את החשבון?</p>
 									<p style="font-size:13px; text-align:center; color:red">פעולה זאת אינה ניתנת לביטול!</p>
 									<br />
@@ -185,15 +186,11 @@
 										<table style="width:40%; margin:auto;">
 											<tr>
 												<td><button name="submit" class="btn btn-danger btn-block">אישור</button></td>
-												<td><input class="btn btn-primary btn-block" type="button" value="ביטול" onclick="togglePopUpWindowAreaVisibility(\'div_accountDeleteConfirmationPopUp\');" /></td>
+												<td><input class="btn btn-primary btn-block" type="button" value="ביטול" onclick="toggleDivVisibility(\'div_accountDeleteConfirmationPopUp\');" /></td>
 											</tr>
 										</table>
-									</form>';
-					if (isset($_COOKIE['accountDeleteConfirmation_status'])) {
-						echo '<br />';
-						echo '<p style="color:black; background-color:#ff9696; font-weight:bold; text-align:center;">' . $_COOKIE['accountDeleteConfirmation_status'] . '</p>';
-					}
-					echo		'</div>
+									</form>
+								</div>
 							</div>
 						</div>';
 				}
