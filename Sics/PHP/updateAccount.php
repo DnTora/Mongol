@@ -12,7 +12,7 @@
 		$currentPassword = mysqli_real_escape_string($databaseConnect, $_POST['currentPassword']);
 		
 		$isNewPasswordEntered = (!empty($password) || !empty($passwordRepeat));
-		$row = getUserDetails($databaseConnect, $_SESSION['userAccountNumber']);
+		$row = getUserDetails($databaseConnect, $_SESSION['userAccountNumber'], 'user_name, password');
 		if (empty($userName) || empty($currentPassword))
 			setcookie("accountUpdate_status", "שימו לב: אחד או יותר משדות החובה לא מולאו!", time() + 10, "/");
 		elseif ($isNewPasswordEntered && $password!==$passwordRepeat)

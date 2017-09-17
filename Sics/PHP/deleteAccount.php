@@ -4,7 +4,7 @@
 		include_once 'databaseConnect.php';
 		include_once 'queries/queries.php';
 		$currentPassword = mysqli_real_escape_string($databaseConnect, $_POST['currentPassword']);
-		$row = getUserDetails($databaseConnect, $_SESSION['userAccountNumber']);
+		$row = getUserDetails($databaseConnect, $_SESSION['userAccountNumber'], 'password');
 		if (empty($currentPassword))
 			setcookie("accountDeleteConfirmation_status", "שימו לב: יש להזין את סיסמת המשתמש לאישור!", time() + 10, "/");
 		elseif (!password_verify($currentPassword, $row['password']))
