@@ -1,10 +1,10 @@
 ///////////////////////////////////////////////////////////// Methods /////////////////////////////////////////////////////////////
-function togglePopUpWindowAreaVisibility(windowAreaDivName) {
-	var popUpWindow = document.getElementById(windowAreaDivName);
-	if (popUpWindow.style.display == "")
-		popUpWindow.style.display = "block";
+function toggleDivVisibility(divName) {
+	var div = document.getElementById(divName);
+	if (div.style.display == "")
+		div.style.display = "block";
 	else
-		popUpWindow.style.display = "";
+		div.style.display = "";
 }
 
 function getCookieValue(cookieName) {
@@ -26,15 +26,25 @@ function deleteCookie(cookieName) {
 
 ///////////////////////////////////////////////////////////// Events //////////////////////////////////////////////////////////////
 window.onload = function(event) {
-	deleteCookie("login_status");
+	if (getCookieValue("login_status") != null) {
+		toggleDivVisibility("div_loginArea_MOBILE");
+		deleteCookie("login_status");
+	}
 	if (getCookieValue("registeration_status") != null) {
-		togglePopUpWindowAreaVisibility("div_registerationPopUp");
+		toggleDivVisibility("div_registerationPopUp");
 		deleteCookie("registeration_status");
 	}
 	if (getCookieValue("accountUpdate_status") != null) {
-		togglePopUpWindowAreaVisibility("div_accountUpdatePopUp");
+		toggleDivVisibility("div_accountUpdatePopUp");
 		deleteCookie("accountUpdate_status");
 	}
-	deleteCookie("order_status");
+	if (getCookieValue("accountDeleteConfirmation_status") != null) {
+		toggleDivVisibility("div_accountUpdatePopUp");
+		toggleDivVisibility("div_accountDeleteConfirmationPopUp");
+		deleteCookie("accountDeleteConfirmation_status");
+	}
+	if (getCookieValue("order_status") != null) {
+		deleteCookie("order_status");
+	}
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
