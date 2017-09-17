@@ -1,6 +1,6 @@
 <?php
-	function getUserDetails($databaseConnect, $userAccountNumber) {
-		$sql = "SELECT * FROM users WHERE user_account_number = " . $userAccountNumber;
+	function getUserDetails($databaseConnect, $userAccountNumber, $select) {
+		$sql = "SELECT " . $select . " FROM users WHERE user_account_number = " . $userAccountNumber;
 		$result = mysqli_query($databaseConnect, $sql);
 		return mysqli_fetch_assoc($result);
 	}
