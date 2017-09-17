@@ -1,28 +1,55 @@
 body {
 	background-image:url("../resources/images/background.png");
 }
-p {
-	font-size:20px;
+@media screen and (min-width:1100px) { /* For desktop */
+	p {
+		font-size:20px;
+	}
+	h1 {
+		font-size:60px;
+		text-decoration:underline;
+	}
+	h2 {
+		font-size:50px;
+		text-decoration:underline;
+	}
+	h3 {
+		font-size:40px;
+	}
+	h4 {
+		font-size:30px;
+	}
+	h5 {
+		font-size:20px;
+	}
+	h6 {
+		font-size:10px;
+	}
 }
-h1 {
-	font-size:60px;
-	text-decoration:underline;
-}
-h2 {
-	font-size:50px;
-	text-decoration:underline;
-}
-h3 {
-	font-size:40px;
-}
-h4 {
-	font-size:30px;
-}
-h5 {
-	font-size:20px;
-}
-h6 {
-	font-size:10px;
+@media screen and (max-width:1099px) { /* For mobile */
+	p {
+		font-size:10px;
+	}
+	h1 {
+		font-size:40px;
+		text-decoration:underline;
+	}
+	h2 {
+		font-size:30px;
+		text-decoration:underline;
+	}
+	h3 {
+		font-size:25px;
+	}
+	h4 {
+		font-size:20px;
+	}
+	h5 {
+		font-size:10px;
+	}
+	h6 {
+		font-size:5px;
+	}
 }
 hr {
 	clear:both;
@@ -40,106 +67,241 @@ table {
 }
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-	#div_container {
-		width:1100px;
-		margin:auto;
+	@media screen and (min-width:1100px) { /* For desktop */
+		#div_container {
+			width:1100px;
+			margin:auto;
+		}
 	}
-		#div_registerationPopUp {
-			display:none;
-			background-color:RGBA(100, 100, 100, 0.8);
+	@media screen and (max-width:1099px) { /* For mobile */
+		#div_container {
 			width:100%;
-			height:100%;
-			position:fixed;
-			left:0px;
-			top:0px;
 		}
-			#div_registerationWindow {
-				background-color:white;
-				border:1px solid;
-				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
-				width:630px;
-				height:646px;
+	}
+	
+	
+	
+	
+	
+	
+		@media screen and (min-width:1100px) { /* For desktop */
+			#div_registerationPopUp {
+				display:none;
+				background-color:RGBA(100, 100, 100, 0.8);
+				width:100%;
+				height:100%;
 				position:fixed;
-				left:calc(50% - 315px);
-				top:calc(50% - 323px);
+				left:0px;
+				top:0px;
 			}
-				#div_registerationWindowTitle {
-					background-color:#5d9afc;
+				#div_registerationWindow {
+					background-color:white;
 					border:1px solid;
+					box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+					width:630px;
+					height:646px;
+					position:fixed;
+					left:calc(50% - 315px);
+					top:calc(50% - 323px);
 				}
-				#div_registerationWindowContent {
-					
-				}
-					#form_registeration {
-						width:60%;
-						margin:auto;
+					#div_registerationWindowTitle {
+						background-color:#5d9afc;
+						border:1px solid;
 					}
-						.tableData_registerationInput {
-							width:50%;
+					#div_registerationWindowContent {
+						
+					}
+						#form_registeration {
+							width:60%;
+							margin:auto;
 						}
-		#div_accountUpdatePopUp {
-			display:none;
-			background-color:RGBA(100, 100, 100, 0.8);
-			width:100%;
-			height:100%;
-			position:fixed;
-			left:0px;
-			top:0px;
+							.tableData_registerationInput {
+								width:50%;
+							}
 		}
-			#div_accountUpdateWindow {
-				background-color:white;
-				border:1px solid;
-				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
-				width:630px;
-				height:726px;
-				position:fixed;
-				left:calc(50% - 315px);
-				top:calc(50% - 363px);
+		@media screen and (max-width:1099px) { /* For mobile */
+			#div_registerationPopUp {
+				display:none;
+				background-color:transparent;
+				width:100%;
+				height:100%;
+				position:absolute;
+				left:0px;
+				top:0px;
 			}
-				#div_accountUpdateWindowTitle {
-					background-color:#5d9afc;
+				#div_registerationWindow {
+					background-color:white;
 					border:1px solid;
+					box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+					width:calc(100% - 20px);
+					height:572px;
+					position:absolute;
+					left:10px;
+					top:10px;
 				}
-				#div_accountUpdateWindowContent {
-					
-				}
-					#form_accountUpdate {
-						width:60%;
-						margin:auto;
+					#div_registerationWindowTitle {
+						background-color:#5d9afc;
+						border:1px solid;
 					}
-						.tableData_accountUpdateInput {
-							width:50%;
+					#div_registerationWindowContent {
+						
+					}
+						#form_registeration {
+							width:90%;
+							margin:auto;
 						}
-		#div_accountDeleteConfirmationPopUp {
-			display:none;
-			background-color:RGBA(100, 100, 100, 0.8);
-			width:100%;
-			height:100%;
-			position:fixed;
-			left:0px;
-			top:0px;
+							.tableData_registerationInput {
+								width:60%;
+							}
 		}
-			#div_accountDeleteConfirmationWindow {
-				background-color:white;
-				border:1px solid;
-				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
-				width:520px;
-				height:374px;
+		
+		
+		
+		
+		
+		
+		@media screen and (min-width:1100px) { /* For desktop */
+			#div_accountUpdatePopUp {
+				display:none;
+				background-color:RGBA(100, 100, 100, 0.8);
+				width:100%;
+				height:100%;
 				position:fixed;
-				left:calc(50% - 260px);
-				top:calc(50% - 187px);
+				left:0px;
+				top:0px;
 			}
-				#div_accountDeleteConfirmationWindowTitle {
-					background-color:#5d9afc;
+				#div_accountUpdateWindow {
+					background-color:white;
 					border:1px solid;
+					box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+					width:630px;
+					height:726px;
+					position:fixed;
+					left:calc(50% - 315px);
+					top:calc(50% - 363px);
 				}
-				#div_accountDeleteConfirmationWindowContent {
-					
-				}
-					#form_accountDelete {
-						width:60%;
-						margin:auto;
+					#div_accountUpdateWindowTitle {
+						background-color:#5d9afc;
+						border:1px solid;
 					}
-						.tableData_accountDeleteInput {
-							width:50%;
+					#div_accountUpdateWindowContent {
+						
+					}
+						#form_accountUpdate {
+							width:60%;
+							margin:auto;
 						}
+							.tableData_accountUpdateInput {
+								width:50%;
+							}
+		}
+		@media screen and (max-width:1099px) { /* For mobile */
+			#div_accountUpdatePopUp {
+				display:none;
+				background-color:transparent;
+				width:100%;
+				height:100%;
+				position:absolute;
+				left:0px;
+				top:0px;
+			}
+				#div_accountUpdateWindow {
+					background-color:white;
+					border:1px solid;
+					box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+					width:calc(100% - 20px);
+					height:648px;
+					position:absolute;
+					left:10px;
+					top:10px;
+				}
+					#div_accountUpdateWindowTitle {
+						background-color:#5d9afc;
+						border:1px solid;
+					}
+					#div_accountUpdateWindowContent {
+						
+					}
+						#form_accountUpdate {
+							width:90%;
+							margin:auto;
+						}
+							.tableData_accountUpdateInput {
+								width:60%;
+							}
+		}
+		
+		
+		
+		
+		
+		@media screen and (min-width:1100px) { /* For desktop */
+			#div_accountDeleteConfirmationPopUp {
+				display:none;
+				background-color:RGBA(100, 100, 100, 0.8);
+				width:100%;
+				height:100%;
+				position:fixed;
+				left:0px;
+				top:0px;
+			}
+				#div_accountDeleteConfirmationWindow {
+					background-color:white;
+					border:1px solid;
+					box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+					width:520px;
+					height:374px;
+					position:fixed;
+					left:calc(50% - 260px);
+					top:calc(50% - 187px);
+				}
+					#div_accountDeleteConfirmationWindowTitle {
+						background-color:#5d9afc;
+						border:1px solid;
+					}
+					#div_accountDeleteConfirmationWindowContent {
+						
+					}
+						#form_accountDelete {
+							width:60%;
+							margin:auto;
+						}
+							.tableData_accountDeleteInput {
+								width:50%;
+							}
+		}
+		@media screen and (max-width:1099px) { /* For mobile */
+			#div_accountDeleteConfirmationPopUp {
+				display:none;
+				background-color:transparent;
+				width:100%;
+				height:100%;
+				position:absolute;
+				left:0px;
+				top:0px;
+			}
+				#div_accountDeleteConfirmationWindow {
+					background-color:white;
+					border:1px solid;
+					box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+					width:calc(100% - 40px);
+					height:320px;
+					position:absolute;
+					left:20px;
+					top:20px;
+				}
+					#div_accountDeleteConfirmationWindowTitle {
+						background-color:#5d9afc;
+						border:1px solid;
+					}
+					#div_accountDeleteConfirmationWindowContent {
+						
+					}
+						#form_accountDelete {
+							width:90%;
+							margin:auto;
+						}
+							.tableData_accountDeleteInput {
+								width:60%;
+							}
+		}
