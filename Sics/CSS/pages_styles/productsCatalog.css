@@ -1,0 +1,11 @@
+#div_catalogArea {
+	width:100%;
+}
+	.div_product {
+		width:100%;
+		position:relative;
+		/*background-color:#f0ebc3;*/
+		background-color:white;
+		border:1px solid;
+		padding:5px;
+	}
