@@ -10,7 +10,7 @@
 										<div id="div_whatsNewContent">
 											<marquee id="marquee_whatsNew" direction="up" scrolldelay=250>
 												<ul>
-													<li><p>הספר יצא לאור, ניתן לבצע הזמנות!</p></li>
+													<li><p>הספר "בחינות מתכונת במדעי המחשב" יצא לאור, ניתן לבצע הזמנות!</p></li>
 												</ul>
 											</marquee>
 										</div>
@@ -29,7 +29,7 @@
 											<br />
 											כל בחינות המתכונת המובאות בספר זה מקוריות לחלוטין.
 											<br />
-											הפתרונות <span style="font-weight:bold">לכל</span> המתכונות בספר זה מובאות ע"י ברקוד שניתן לסריקה בסוף מתכונת.
+											הפתרונות <span style="font-weight:bold">לכל</span> המתכונות בספר זה מובאות ע"י ברקוד שניתן לסריקה בסוף כל מתכונת.
 										</p>
 										<br />
 										<p><span style="font-weight:bold">המתכונות בספר, בדומה לבחינת הבגרות במדעי המחשב מורכבות מ-3 פרקים:</span></p>
