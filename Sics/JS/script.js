@@ -27,7 +27,7 @@ function deleteCookie(cookieName) {
 ///////////////////////////////////////////////////////////// Events //////////////////////////////////////////////////////////////
 window.onload = function(event) {
 	if (getCookieValue("login_status") != null) {
-		toggleDivVisibility("div_loginArea_MOBILE");
+		toggleDivVisibility("div_collapsableToolbarContent_MOBILE");
 		deleteCookie("login_status");
 	}
 	if (getCookieValue("registeration_status") != null) {
