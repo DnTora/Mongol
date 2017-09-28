@@ -9,9 +9,8 @@
 						<table id="table_navigationBar">
 							<tr>
 								<td class="tableData_navigationBarButton"><a href="index.php">דף הבית</a></td>
-								<td class="tableData_navigationBarButton"><a href="order.php">הזמנה</a></td>
+								<td class="tableData_navigationBarButton"><a href="productsCatalog.php">קטלוג מוצרים</a></td>
 								<td class="tableData_navigationBarButton"><a href="contact.php">צור קשר</a></td>
-								<td class="tableData_navigationBarButton"><a href="forum.php">פורום</a></td>
 							</tr>
 						</table>
 					</div>

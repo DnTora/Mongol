@@ -17,7 +17,7 @@
 					} else
 						echo '<br />';
 					echo			'<br />
-									<form id="form_registeration" method="POST" action="PHP/register.php">
+									<form id="form_registeration" method="POST" action="PHP/users/register.php">
 										<table>
 											<tr>
 												<td><p><span style="color:red">*</span> שם משתמש:</p></td>
@@ -56,7 +56,7 @@
 										<br />
 										<table>
 											<tr>
-												<td><p>  אימייל:</p></td>
+												<td><p><span style="color:red">*</span> אימייל:</p></td>
 												<td class="tableData_registerationInput"><input class="form-control" type="text" name="emailAddress" /></td>
 											</tr>
 										</table>
@@ -92,7 +92,7 @@
 					} else
 						echo '<br />';
 					echo			'<br />
-									<form id="form_accountUpdate" method="POST" action="PHP/updateAccount.php">
+									<form id="form_accountUpdate" method="POST" action="PHP/users/updateAccount.php">
 										<table>
 											<tr>
 												<td><p>  שם פרטי:</p></td>
@@ -174,7 +174,7 @@
 									<p style="text-align:center; margin-bottom:0px">האם למחוק את החשבון?</p>
 									<p style="font-size:13px; text-align:center; color:red">פעולה זאת אינה ניתנת לביטול!</p>
 									<br />
-									<form id="form_accountDelete" method="POST" action="PHP/deleteAccount.php">
+									<form id="form_accountDelete" method="POST" action="PHP/users/deleteAccount.php">
 										<table>
 											<tr>
 												<td><p>סיסמה נוכחית:</p></td>
@@ -197,6 +197,5 @@
 			?>
 <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 		</div>
-		<script src="JS/script.js"></script>
 	</body>
 </html>
