@@ -3,7 +3,7 @@
 	include_once "PHP - HTML static content/htmlBody_header.php";
 	include_once "PHP - HTML static content/htmlBody_main_toolbars.php";
 	////////////////////////////////////////////////////// Page content file //////////////////////////////////////////////////////
-	include_once "PHP - HTML pages content/index.php";
+	include_once "PHP - HTML pages content/shoppingCart.php";
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	include_once "PHP - HTML static content/htmlBody_footer.php";
 	include_once "PHP - HTML static content/htmlBody_bottom.php";
