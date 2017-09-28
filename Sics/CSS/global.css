@@ -1,5 +1,5 @@
 body {
-	background-image:url("../resources/images/background.png");
+	background-color:#7caac0;
 }
 @media screen and (min-width:1100px) { /* For desktop */
 	p {

@@ -35,20 +35,27 @@
 					display:block;
 					float:right;
 				}
-				#div_loginArea_MOBILE {
+				#div_collapsableToolbarContent_MOBILE {
 					display:none;
-					background-color:#8fb8fc;
-					margin:5px 5px 5px 5px;
-					border:1px solid;
 				}
-					#form_login_MOBILE {
-						
+					#div_loginArea_MOBILE {
+						background-color:#8fb8fc;
+						margin:5px 5px 5px 5px;
+						border:1px solid;
 					}
-					#div_loginAreaWelcomeMessage_MOBILE {
-						
-					}
-					#form_logout_MOBILE {
-						
+						#form_login_MOBILE {
+							
+						}
+						#div_loginAreaWelcomeMessage_MOBILE {
+							
+						}
+						#form_logout_MOBILE {
+							
+						}
+					#div_shoppingCart_MOBILE {
+						background-color:#91c8fa;
+						margin:5px 5px 5px 5px;
+						border:1px solid;
 					}
 	
 	
@@ -87,6 +94,11 @@
 					#form_logout_DESKTOP {
 						
 					}
+				#div_shoppingCart_DESKTOP {
+					background-color:#91c8fa;
+					margin:5px 5px 5px 5px;
+					border:1px solid;
+				}
 					
 					
 					
