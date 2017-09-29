@@ -26,7 +26,7 @@
 																	<p><span style="text-decoration:underline; font-weight:bold;">מחיר:</span> ' . $row['product_price'] . '₪</p>';
 												if (!isItemAlreadyInShoppingCart($row['product_number']))
 													echo
-														'<form id="form_addItemToShoppingCart" method="POST" action="PHP/shoppingCart/addItemToShoppingCart.php">
+														'<form class="form_addItemToShoppingCart" method="POST" action="PHP/shoppingCart/addItemToShoppingCart.php">
 															<button class="btn btn-sm btn-success" name="submit" style="position:absolute; left:5px; bottom:5px;">הוסף לסל הקניות</button>
 															<input type="hidden" name="productNumber" value="' . $row['product_number'] . '" />
 														</form>';
