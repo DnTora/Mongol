@@ -1,10 +1,16 @@
 #div_shoppingCartItemsArea {
 	width:100%;
 }
-	.div_shoppingCartItem {
+	#table_shoppingCartItems {
 		width:100%;
 		background-color:#e6f5aa;
 		border:1px solid;
+	}
+		.form_deleteItemFromShoppingCart {
+			
+		}
+	#form_deleteAllItemsFromShoppingCart {
+		text-align:left;
 	}
 #div_orderArea {
 	
