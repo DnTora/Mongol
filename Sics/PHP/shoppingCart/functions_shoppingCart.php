@@ -28,15 +28,29 @@
 	function isItemAlreadyInShoppingCart($itemId) {
 		if (isset($_COOKIE['shoppingCart_data'])) {
 			$cookieValue = $_COOKIE['shoppingCart_data'];
-			if ($cookieValue != '') {
-				$splittedCookieValueArray = explode(',', $cookieValue);
-				for ($i = 0; $i < count($splittedCookieValueArray) - 1; $i++) {
-					if ($splittedCookieValueArray[$i] == $itemId)
-						return true;
-				}
+			$splittedCookieValueArray = explode(',', $cookieValue);
+			for ($i = 0; $i < count($splittedCookieValueArray) - 1; $i++) {
+				if ($splittedCookieValueArray[$i] == $itemId)
+					return true;
 			}
 		}
 		return false;
+	}
+	
+	function getSqlWhereConditionStringOfShoppingCartItems() {
+		if (isset($_COOKIE['shoppingCart_data'])) {
+			$shoppingCartItemsString = '';
+			$cookieValue = $_COOKIE['shoppingCart_data'];
+			$splittedCookieValueArray = explode(',', $cookieValue);
+			for ($i = 0; $i < count($splittedCookieValueArray) - 1; $i++) {
+				if ($i == count($splittedCookieValueArray) - 2)
+					$shoppingCartItemsString .= 'product_number=' . $splittedCookieValueArray[$i];
+				else
+					$shoppingCartItemsString .= 'product_number=' . $splittedCookieValueArray[$i] . ' OR ';
+			}
+			return $shoppingCartItemsString;
+		}
+		return null;
 	}
 	
 	function getShoppingCartItemsCount() {
