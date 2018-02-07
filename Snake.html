@@ -1,0 +1,283 @@
+<html>
+<canvas id="GameSnake" width="800" height="800" ></canvas>
+<script>
+var canvas;
+var random; 
+var score = 0;
+var snakeHead;
+
+var fruit;
+var canvasContext;
+
+const speed = 20;
+
+var XspeedHead = speed;
+var YspeedHead = 0;
+
+
+var direction = "right";
+var body = [];
+
+window.onload = function(){
+
+
+     canvas = document.getElementById("GameSnake");
+     canvasContext = canvas.getContext('2d');
+
+     random = new RandomNums();
+     fruit = new fruit(random.x,random.y);
+     
+     snakeHead = new snakeHead(20,40);
+     
+     body.push(new SnakeBody(0,40));
+     
+     var framePerSecond = 20;
+     setInterval(function(){
+            
+                             
+       setUpdate();
+     
+
+             
+
+
+
+},1000/framePerSecond);
+     
+
+    window.addEventListener('keydown',function(evt){
+
+
+            var keyCode = evt.keyCode;
+    
+    
+             switch(keyCode){
+ 
+              //left
+              case 37: 
+               if(direction != "right")
+                  direction = "left";
+              break;
+
+              //up
+              case 38: 
+                if(direction != "down")
+                   direction = "up";
+              break;
+
+              //right
+              case 39: 
+                if(direction != "left")
+                   direction = "right";
+              break;
+
+              //down
+              case 40: 
+                if( direction != "up")
+                    direction = "down";
+              break;
+              
+              
+       
+
+    }
+        
+
+  });
+
+
+
+};
+
+
+
+
+ 
+function movement(){
+ 
+    addPartToBody();
+    switchSpeed();
+    snakeMoves();       
+     
+
+        
+}
+
+
+
+
+function draw(){
+
+    buildRect(0,0,canvas.width,canvas.height,'black');
+
+    buildRect(snakeHead.x,snakeHead.y,snakeHead.width,snakeHead.height,snakeHead.color);
+     for(var i in body)
+    buildRect(body[i].x,body[i].y,body[i].width,body[i].height,body[i].color);
+
+    buildRect(fruit.x,fruit.y,fruit.width,fruit.height,fruit.color);
+    
+    canvasContext.fillText("Score: "+score,canvas.width/2,20);
+}
+
+
+
+
+
+
+function setUpdate(){
+  
+  movement();
+  draw();
+  
+
+}
+
+
+
+function SnakeCheckIfReset(){
+                            
+                      for(var c=0; c<body.length; c++) {                    
+                             if((body[c].x == snakeHead.x) && (body[c].y == snakeHead.y))                                         
+                                         snakeReset();
+                            }
+                             if(snakeHead.y<0||snakeHead.y>canvas.height||snakeHead.x<0||snakeHead.x>canvas.width)
+                                                          snakeReset();
+
+
+
+}
+
+function snakeReset(){
+ 
+   body.splice(1, body.length-1);
+   direction = "right";
+   body[0].x = 0;
+   body[0].y = 40;
+   snakeHead.y = 40;
+   snakeHead.x = 20;
+   score =  0;
+                 
+   
+}
+
+function snakeMoves(){
+ 
+
+      var x ;
+      var y ;
+      var tempx = snakeHead.x;
+      var tempy = snakeHead.y;
+      console.log("head");
+      snakeHead.x += XspeedHead;
+      snakeHead.y += YspeedHead;
+     
+      for(var i=0; i<body.length; i++)
+        {    x = tempx;
+             y = tempy;
+             tempx =  body[i].x;
+             tempy =  body[i].y;
+             body[i].x = x;
+             body[i].y = y;
+      console.log("move");
+    }
+SnakeCheckIfReset();
+        
+}
+
+function switchSpeed(){
+
+
+      if(direction== "down")
+         { XspeedHead = 0; YspeedHead = speed;}
+      if(direction== "right")
+         { XspeedHead = speed; YspeedHead = 0;}  
+      if(direction== "up")
+         { XspeedHead = 0; YspeedHead = -speed;} 
+      if (direction == "left")
+         { XspeedHead = -speed; YspeedHead = 0;} 
+ }
+
+
+
+
+
+function addPartToBody(){
+
+if(snakeHead.x == fruit.x && snakeHead.y == fruit.y){
+ 
+     score++;
+    
+     random = new RandomNums();
+     body.push(new SnakeBody(fruit.x,fruit.y));
+     fruit.x = random.x;
+     fruit.y = random.y;
+ 
+                      
+                            
+   } 
+}
+
+
+
+
+
+
+function RandomNums(){
+
+   var x = 1;
+   var y = 1;
+   
+   while(x%20!=0)
+   x =  Math.floor((Math.random() * (canvas.width-20)) + 1);
+
+   while(y%20!=0)
+   y =  Math.floor((Math.random() * (canvas.width-20)) + 1);
+
+  return{
+
+    x:x,
+    y:y
+}
+
+}
+
+function SnakeBody(x,y){
+
+
+   this.x = x;
+   this.y = y;
+   this.width = 20;
+   this.height = 20;
+   this.color = 'blue';
+   
+   
+}
+
+function snakeHead(x,y){
+
+
+   this.x = x;
+   this.y = y;
+   this.width = 20;
+   this.height = 20;
+   this.color = 'yellow';
+}
+
+
+function fruit(x,y){
+     this.y = y;
+     this.x = x;
+     this.color='red';
+     this.width=20;
+     this.height=20;
+
+}
+
+function buildRect(left,top,width,height,color){
+canvasContext.fillStyle = color;
+canvasContext.fillRect(left,top,width,height);
+
+}
+
+</script>
+</html>
